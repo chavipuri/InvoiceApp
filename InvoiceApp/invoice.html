@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Invoice</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="lib.js"></script>
+</head>
+<body>
+ <div class="container" style="background-color:#efefef">
+  <center><h2>Invoice</h2></center>
+  <form action="" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label>Customer Name</label>
+                <input type="text" class="form-control customer" name="customer" required>
+            </td>
+            <td>
+                <label>Invoice Number</label>
+                <input type="text" class="form-control invoice" name="invoice" required>
+            </td>
+            <td>
+                <label>Date</label>
+                <input type="date" class="form-control date" name="date" required>
+            </td>
+
+        </tr>
+    </table>
+    <hr style="border:1px dashed black">
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sub Total</th>
+                <th>Remove</th>
+                <th><input type="button"  class="btn btn-primary add" value="+"></th>
+            </tr>
+        </thead>
+        <tbody class="details" id="body">
+              <tr>
+                   <td><input type="text" name="productname" list="search" class="form-control productname" required></td>
+                   <td><input type="text" name="quantity" class="form-control quantity"></td>
+                   <td><input type="text" name="price" class="form-control price"></td>
+                   <td><input type="text" name="subtotal" class="form-control subtotal" readonly></td>
+                   <td><input type="button"  class="btn btn-danger remove" value="Remove"></td>
+              </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <label>Total</label>
+                    <input type="text" name="total" class="total form-control" readonly><br/>
+                    <input type="submit" class="btn btn-primary save" name="order">
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <datalist id="search">
+        <option>Apple</option>
+        <option>Avocado</option>
+        <option>Mandarin</option>
+        <option>Orange</option>
+        <option>Pear</option>
+        <option>Pineapple</option>
+        <option>Watermelon</option>
+        <option>Blueberry</option>
+        <option>Kiwi</option>
+        <option>Banana</option>
+        <option>Strawberry</option>
+    </datalist>
+  </form>
+ </div>
+</body>
+</html>
